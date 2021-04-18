@@ -30,7 +30,7 @@ int main(void) {
 					switch (opcion)
 					{
 					case 1 :
-						flagValorA = 1; // sin esto no muestra los resultados en 000000000
+						flagValorA = 1;
 						printf ("Ingrese valor A\n");
 						fflush (stdin);
 						scanf("%f",&valorA);
@@ -45,20 +45,15 @@ int main(void) {
 					printf ("El valor de B: %f\n", valorB);
 						break;
 
-					case 3 :// SI INGRESO 0 EN VALORB DEJA DE MOSTRAR EL MENU SI ING TODO CORRECTO FUNC BIEN
+					case 3 :
 
-						if (flagValorA == 1 && flagValorB == 1 ){// bandera para caso de error al ingresar directo a la opcion 3
+						if (flagValorA == 1 && flagValorB == 1 ){
 
 						printf ("Se han realizado todas las operaciones\n\n");
 						resultSumar = sumar (valorA, valorB);
 						resultRestar = restar (valorA, valorB);
 						resultMultiplicar= multiplicar(valorA, valorB);
 						resultDividir= dividir (valorA, valorB);
-						//if(valorB!=0)
-						//{
-						//	resultDividir= dividir (valorA, valorB);
-						//}
-
 						resultFactorialA = factorial(valorA);
 						resultFactorialB = factorial(valorB);
 						}
@@ -73,7 +68,7 @@ int main(void) {
 						printf ("El resultado de %f * %f es: %f\n", valorA, valorB, resultMultiplicar);
 
 
-						if ( validarDividirPorCero  == 0)//valorB para mostrar caso de error
+						if ( validarDividirPorCero  == 0)
 						  {
 							printf("El resultado de %f / %f es: %f\n", valorA, valorB, resultDividir);
 						  }
@@ -84,6 +79,7 @@ int main(void) {
 						}
 						printf ("El factorial de %f es %f\n", valorA, resultFactorialA);
 						printf ("El factorial de %f es %f\n", valorB, resultFactorialB);
+						printf("\n");
 						break;
 					}
 				}
